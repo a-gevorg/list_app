@@ -1,0 +1,61 @@
+{
+  "name": "list-app",
+  "version": "0.1.0",
+  "description": "simple list application",
+  "private": true,
+  "authors": [
+    "ivanyan"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://ivan_ivanyan@bitbucket.org/ivan_ivanyan/list-app.git"
+  },
+  "scripts": {
+    "start-dev": "set PORT=3001 && react-scripts start",
+    "build": "npm run create-docs && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "docs-server": "simple-server docs 8090",
+    "create-docs": "jsdoc src -r -d docs",
+    "docs": "npm run create-docs && npm run docs-server",
+    "start": "concurrently \"npm:start-dev\" \"npm:docs\"",
+    "eslint": "eslint src/ -c .eslintrc.json --ignore-path .eslintignore",
+    "eslint-fix": "eslint src/ -c .eslintrc.json --ignore-path .eslintignore --fix"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "concurrently": "^4.0.1",
+    "eslint": "^5.6.0",
+    "eslint-config-react-app": "^3.0.4",
+    "eslint-plugin-flowtype": "^2.50.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-props": "^0.1.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.1.2",
+    "jsdoc": "^3.5.5",
+    "simple-server": "^1.1.1",
+    "why-did-you-update": "^0.1.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
